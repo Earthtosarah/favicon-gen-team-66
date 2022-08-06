@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'allauth',
-    'allauth.account',
+    # 'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'rest_auth',
     
     # my apps
-    # 'apps.account',
+    'apps.account',
 ]
 
 # REST_FRAMEWORK = {

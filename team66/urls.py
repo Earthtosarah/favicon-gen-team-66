@@ -21,6 +21,5 @@ urlpatterns = [
     path('', include('apps.account.urls')),
     path('accounts/', include('allauth.urls')),
     path('api-auth/', include('rest_framework.urls')),
-    # path('auth/', include('rest_auth.urls')),
-    path('', include('apps.account.urls')),
+    path('auth/', include('rest_auth.urls')),
 ]

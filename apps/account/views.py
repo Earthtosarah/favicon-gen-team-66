@@ -3,6 +3,8 @@ from django.contrib.auth import get_user_model
 from allauth.socialaccount.providers.facebook import views as facebook_views
 from allauth.socialaccount.providers.google import views as google_views
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+from rest_auth.registration.views import SocialLoginView
+from .models import Profile
 from django.urls import reverse
 from .serializer import (
     UserSerializer,
@@ -22,7 +24,6 @@ from rest_framework.response import Response
 from django.contrib.auth import login, logout
 from rest_framework.views import APIView
 from rest_framework import status
-from rest_auth.registration.views import SocialLoginView
 
 
 User = get_user_model()

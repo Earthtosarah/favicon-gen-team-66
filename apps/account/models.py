@@ -13,6 +13,5 @@ class Profile(models.Model):
     email = models.EmailField(max_length=254, editable=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
-    def __s
-    tr__ (self) -> any:
+    def __str__ (self) -> any:
         return self.name

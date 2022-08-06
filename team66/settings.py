@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config(
-    "SECRET_KEY ",
+    "SECRET_KEY ", default='django-insecure-b5e=4+-nkh(ox^otzk)71+zbb!x6ovp8fca&opjdx&e*8t%p(_'
 )
 
 
@@ -58,9 +58,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'django.contrib.sites',
 
-    # my apps
-    # 'apps.account.apps.AccountConfig',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -68,9 +65,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_auth',
     
     # my apps
-    'apps.account',
+    # 'apps.account',
 ]
 
 # REST_FRAMEWORK = {
@@ -88,6 +86,7 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
